@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stakeholder Engagement Plan</title>
+    <link rel="stylesheet" href="css/scratch.css">
+    <style>
+        .tile-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .tile {
+            background: #f4f4f4;
+            border: 2px solid #4a90e2;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .tile h3 {
+            color: #4a90e2;
+            margin-bottom: 15px;
+        }
+
+        .tile ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .tile p {
+            line-height: 1.6;
+        }
+
+<style>
+    .popup {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #4a90e2;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: none; /* Hidden by default */
+    }
+
+    .popup.show {
+        display: block;
+    }
+
+    .close-popup {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+</style>
+
+<div id="popup" class="popup">
+    Diagram below
+    <button class="close-popup" onclick="closePopup()">×</button>
+</div>
+
+<script>
+    // Show the popup after a delay
+    setTimeout(() => {
+        document.getElementById('popup').classList.add('show');
+    }, 1000); // 1 second delay
+
+    // Close popup function
+    function closePopup() {
+        document.getElementById('popup').classList.remove('show');
+    }
+</script>
+</head>
+<body>
+    <header>
+        <h1>Stakeholder Engagement Plan</h1>
+        <img src="NSWLSC.jpg" alt="NSWLSC Logo">
+    </header>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="executive-summary.html" class="nav-link">Executive Summary</a>
+        <a href="objective-context.html" class="nav-link">Objective & Context</a>
+        <a href="testing-plan.html" class="nav-link">Testing Plan</a>
+        <a href="stakeholder-engagement.html" class="nav-link">Stakeholder Engagement</a>
+        <a href="prioritisation.html" class="nav-link">Prioritisation</a>
+        <a href="success.html" class="nav-link">Measuring Success</a>
+        <a href="alignment-with-capabilities.html" class="nav-link">Alignment with Capabilities</a>
+        <a href="conclusion.html" class="nav-link">Conclusion</a>
+    </nav>
+
+    <section class="tile-container">
+        <div class="tile">
+            <h3>1. Identifying Stakeholders</h3>
+            <p>
+                To conduct comprehensive testing and implementation, it is necessary to identify all relevant stakeholders who will be impacted by or can influence the system change.
+            </p>
+            <ul>
+                <li><strong>Internal Team:</strong> Developers, Project Managers, Business Analysts.</li>
+                <li><strong>Broader Organisation:</strong> Customer Service Teams, Leadership, End Users.</li>
+            </ul>
+        </div>
+
+        <div class="tile">
+            <h3>2. Engaging Team Members</h3>
+            <p>Engagement with the direct team is crucial for a synchronised effort and efficient problem solving for the system. Key strategies include:</p>
+            <ul>
+                <li><strong>Weekly Stand-Ups:</strong> Provide regular updates, discuss challenges, and align on priorities.</li>
+                <li><strong>Collaborative Tools:</strong> Use Jira for defect tracking and Confluence for documentation.</li>
+                <li><strong>Communication Channels:</strong> Use platforms like Microsoft Teams or Slack for instant messaging.</li>
+            </ul>
+        </div>
+
+        <div class="tile">
+            <h3>3. Engaging Broader Stakeholders</h3>
+            <p>
+                Broader Stakeholder engagement ensures that the system change meets organisational needs. Effective methods include:
+            </p>
+            <ul>
+                <li><strong>Regular Updates:</strong> Use emails and dashboards (e.g., Power BI, Tableau) to provide progress reports.</li>
+                <li><strong>Feedback Loops:</strong> Conduct surveys and focus groups for user satisfaction and system performance insights.</li>
+                <li><strong>Stakeholder Meetings:</strong> Address concerns and gain necessary approvals.</li>
+            </ul>
+        </div>
+
+        <div class="tile">
+            <h3>4. Customer Feedback</h3>
+            <p>
+                Incorporating customer feedback ensures the system meets user expectations. Key approaches include:
+            </p>
+            <ul>
+                <li><strong>Post-Implementation Surveys:</strong> Gather data on system usability and performance.</li>
+                <li><strong>Customer Support Channels:</strong> Monitor trends and analyse tickets for recurring issues.</li>
+                <li><strong>Feedback Integration:</strong> Include customer insights during the testing process for iterative improvements.</li>
+            </ul>
+        </div>
+
+        <div class="tile">
+            <h3>5. Visual Representation</h3>
+            <p>
+                To communicate the stakeholder engagement process effectively, a stakeholder map will be used.
+            </p>
+            <ul>
+                <li><strong>Purpose:</strong> Visualise key stakeholders, their interests, and communication flows.</li>
+                <li><strong>Components:</strong> Nodes represent stakeholders, and connections indicate communication channels.</li>
+                <li><strong>Benefits:</strong> Identify communication gaps and facilitate a better understanding of stakeholder roles and influence.</li>
+                <li><strong>Example:</strong> See example below: </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+    <h2>Stakeholder Map</h2>
+    <p style="text-align: center;">An example of a visual representation of stakeholders by influence and interest level, facilitating better engagement strategies.</p>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>High Influence, High Interest</h3>
+            <p>Leadership</p>
+            <p>Project Managers</p>
+        </div>
+        <div class="grid-item">
+            <h3>High Influence, Low Interest</h3>
+            <p>Senior Executives</p>
+            <p>Sponsors</p>
+        </div>
+        <div class="grid-item">
+            <h3>Low Influence, High Interest</h3>
+            <p>End Users</p>
+            <p>Customer Service Teams</p>
+        </div>
+        <div class="grid-item">
+            <h3>Low Influence, Low Interest</h3>
+            <p>Support Staff</p>
+            <p>Peripheral Teams</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 800px;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid black;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+
+    .grid-item {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+    }
+
+    .grid-item h3 {
+        color: #4a90e2;
+        margin-bottom: 10px;
+    }
+
+    .grid-item p {
+        margin: 5px 0;
+    }
+</style>
+
+
+    <footer>
+        <p>&copy; 2025 Daniel Rittie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

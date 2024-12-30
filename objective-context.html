@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objective & Context</title>
+    <link rel="stylesheet" href="css/scratch.css">
+    <style>
+        .content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: background 0.3s;
+        }
+
+        .tab:hover {
+            background: #50e3c2;
+        }
+
+        .tab.active {
+            background: #50e3c2;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelector(`#${tab}`).classList.add('active');
+
+            document.querySelectorAll('.tab').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Objective & Context</h1>
+        <img src="NSWLSC.jpg" alt="NSWLSC Logo">
+    </header>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="executive-summary.html" class="nav-link">Executive Summary</a>
+        <a href="objective-context.html" class="nav-link">Objective & Context</a>
+        <a href="testing-plan.html" class="nav-link">Testing Plan</a>
+        <a href="stakeholder-engagement.html" class="nav-link">Stakeholder Engagement</a>
+        <a href="prioritisation.html" class="nav-link">Prioritisation</a>
+        <a href="success.html" class="nav-link">Measuring Success</a>
+        <a href="alignment-with-capabilities.html" class="nav-link">Alignment with Capabilities</a>
+        <a href="conclusion.html" class="nav-link">Conclusion</a>
+    </nav>
+
+    <div class="tabs">
+        <button class="tab active" data-tab="objective" onclick="switchTab('objective')">Objective</button>
+        <button class="tab" data-tab="context" onclick="switchTab('context')">Context</button>
+    </div>
+
+    <section id="objective" class="content active">
+        <h2>Objective</h2>
+        <p>
+            The main objective for this testing plan is to ensure that an urgent system change is properly implemented and thoroughly tested to address any identified issues as well as minimising disruptions to both internal operators and end user experiences. This will involve adhering to established Software Development Life Cycles (SDLC) methodologies, effectively identifying and resolving any defects, and maintaining compliance with the regulatory and organisational standards. The ultimate goal of the testing plan is to deliver a seamless, high quality system update that focuses on supporting the Long Service Corporation’s mission of enhancing customer and employee satisfaction.
+        </p>
+    </section>
+
+    <section id="context" class="content">
+        <h2>Context</h2>
+        <p>
+            As a newly appointed Test Officer with the Long Service Corporation, I understand the pivotal role this position plays within end-to-end testing of system changes. Given the urgent nature of the change, it is essential to adopt a structured and collaborative approach to ensure all aspects of the system updates are validated and optimised for performance. This will involve collaborating with key stakeholders across technical, operational and customer service domains to identify potential risks, prioritise critical tasks, and keep a clear communication throughout the testing process.
+        </p>
+        <p>
+            The Long Service Corporation operates at a fast-paced customer-centric environment where system reliability is critical to achieve its broader objectives. The testing plan I produce will be designed to address immediate concerns but also support the Corporation’s commitment to innovation, operational efficiencies and a user-friendly experience. By applying my technical skills, understanding of system testing methodologies (i.e. Unit testing, Integration testing, User Acceptance testing etc.) and analytical thinking I aim to contribute a simple to use, resilient system that aligns perfectly with the organisations strategic goals.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Daniel Rittie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

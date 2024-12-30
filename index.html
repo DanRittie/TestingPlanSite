@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="css/scratch.css">
+    <style>
+        .about-section {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .about-button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .about-button:hover {
+            background-color: #50e3c2;
+        }
+
+        .about-content {
+            display: none;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #50e3c2;
+        }
+    </style>
+    <script>
+        function toggleAbout() {
+            const content = document.getElementById('about-content');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <img src="NSWLSC.jpg" alt="NSWLSC Logo">
+    </header>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="executive-summary.html" class="nav-link">Executive Summary</a>
+        <a href="objective-context.html" class="nav-link">Objective & Context</a>
+        <a href="testing-plan.html" class="nav-link">Testing Plan</a>
+        <a href="stakeholder-engagement.html" class="nav-link">Stakeholder Engagement</a>
+        <a href="prioritisation.html" class="nav-link">Prioritisation</a>
+        <a href="success.html" class="nav-link">Measuring Success</a>
+        <a href="alignment-with-capabilities.html" class="nav-link">Alignment with Capabilities</a>
+        <a href="conclusion.html" class="nav-link">Conclusion</a>
+    </nav>
+    <section>
+        <h2>Welcome to My Testing Plan Portfolio</h2>
+        <p>Explore my comprehensive testing plan, stakeholder engagement strategies, and much more.</p>
+        <p>For a detailed document of my work, download the full testing plan below:</p>
+        <a href="testing-plan.pdf" target="_blank" download class="download-btn">Download PDF</a>
+    </section>
+    <section class="about-section">
+    <button class="about-button" onclick="toggleAbout()">About Me</button>
+    <div id="about-content" class="about-content">
+        <p>
+            Hello! My name is Daniel Rittie, and I am a final year Information Technology student at the University of Newcastle. I am passionate about solving complex problems and bringing innovative ideas to life. With a strong foundation in programming languages like Python, Java, and JavaScript, I have worked on projects ranging from web applications to AI-driven tools.
+        </p>
+        <p>
+            My journey in the tech world includes developing automation scripts for businesses, leading team projects, and gaining hands-on experience in testing and debugging software. I am particularly drawn to opportunities that focus on innovation, collaboration, and enhancing user experiences.
+        </p>
+        <p>
+            I am inspired by the Department of Customer Service's commitment to improving government services, digital transformation, and regulatory reform. I believe my technical expertise and problem-solving abilities align perfectly with their vision of influencing the future of our great state. I am excited about the chance to contribute to meaningful reforms that benefit communities across New South Wales.
+        </p>
+        <p>
+            My ultimate goal is to create impactful solutions that enhance user experience, improve operational efficiency, and drive technological advancement. I look forward to bringing my skills, dedication, and passion for technology to this exciting role at DCS.
+        </p>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2025 Daniel Rittie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

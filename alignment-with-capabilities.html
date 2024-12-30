@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment with Capabilities</title>
+    <link rel="stylesheet" href="css/scratch.css">
+    <style>
+        .slide-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .slide {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.5s;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .nav-buttons button {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .nav-buttons button:hover {
+            background: #50e3c2;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            background: #000;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #333;
+        }
+    </style>
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.slide');
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            const slides = document.querySelectorAll('.slide');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        window.onload = () => {
+            showSlide(currentSlide);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Alignment with Capabilities</h1>
+        <img src="NSWLSC.jpg" alt="NSWLSC Logo">
+    </header>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="executive-summary.html" class="nav-link">Executive Summary</a>
+        <a href="objective-context.html" class="nav-link">Objective & Context</a>
+        <a href="testing-plan.html" class="nav-link">Testing Plan</a>
+        <a href="stakeholder-engagement.html" class="nav-link">Stakeholder Engagement</a>
+        <a href="prioritisation.html" class="nav-link">Prioritisation</a>
+        <a href="success.html" class="nav-link">Measuring Success</a>
+        <a href="alignment-with-capabilities.html" class="nav-link">Alignment with Capabilities</a>
+        <a href="conclusion.html" class="nav-link">Conclusion</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide active">
+            <h2>Resilience and Courage</h2>
+            <p>
+                Handling urgent changes requires a large amount of composure and adaptability. During my academic projects, I navigated tight deadlines while implementing complex solutions, such as troubleshooting API integrations under time constraints and creating Python scripts to optimise processes for a photography business. These experiences prepared me to remain calm and solution-focused under pressure.
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>Commit to Customer Service</h2>
+            <p>
+                By centering testing efforts on user experience, I ensure systems meet customer needs. During my fantasy football website project, I incorporated user feedback to enhance the interface and provide a seamless experience. At LookPro Photography, I assisted customers with navigating the website and resolving order issues.
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>Work Collaboratively</h2>
+            <p>
+                Collaboration is key to effective testing. I have worked in cross-functional teams during university projects, using tools like Jira for task tracking and Microsoft Teams for coordination. These practices ensured alignment and progress in meeting project goals.
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>Think and Solve Problems</h2>
+            <p>
+                My ability to analyse and resolve issues is demonstrated through automating repetitive tasks at LookPro Photography. Using Python, I significantly reduced process times, showcasing my problem-solving skills and attention to detail.
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>Technology</h2>
+            <p>
+                My comfort with a range of programming languages and frameworks equips me to adapt to new technologies quickly. With hands-on experience using tools like JMeter and Wireshark, I bring the technical expertise needed for thorough and efficient testing.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Daniel Rittie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

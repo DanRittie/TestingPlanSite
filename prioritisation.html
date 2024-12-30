@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prioritisation</title>
+    <link rel="stylesheet" href="css/scratch.css">
+<style>
+    .popup {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #4a90e2;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: none; /* Hidden by default */
+    }
+
+    .popup.show {
+        display: block;
+    }
+
+    .close-popup {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+</style>
+
+<div id="popup" class="popup">
+    Diagram below
+    <button class="close-popup" onclick="closePopup()">×</button>
+</div>
+
+<script>
+    // Show the popup after a delay
+    setTimeout(() => {
+        document.getElementById('popup').classList.add('show');
+    }, 1000); // 1 second delay
+
+    // Close popup function
+    function closePopup() {
+        document.getElementById('popup').classList.remove('show');
+    }
+</script>
+
+</head>
+<body>
+    <header>
+        <h1>Prioritisation</h1>
+        <img src="NSWLSC.jpg" alt="NSWLSC Logo">
+    </header>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="executive-summary.html" class="nav-link">Executive Summary</a>
+        <a href="objective-context.html" class="nav-link">Objective & Context</a>
+        <a href="testing-plan.html" class="nav-link">Testing Plan</a>
+        <a href="stakeholder-engagement.html" class="nav-link">Stakeholder Engagement</a>
+        <a href="prioritisation.html" class="nav-link">Prioritisation</a>
+        <a href="success.html" class="nav-link">Measuring Success</a>
+        <a href="alignment-with-capabilities.html" class="nav-link">Alignment with Capabilities</a>
+        <a href="conclusion.html" class="nav-link">Conclusion</a>
+    </nav>
+
+    <section class="prioritisation-container">
+        <div class="prioritisation-card">
+            <h3>Immediate Actions</h3>
+            <ul>
+                <li><strong>Analyse Change Documentation:</strong> Review specifications to understand the scope and urgency of changes.</li>
+                <li><strong>Set up Testing Environment:</strong> Configure and validate a mirrored testing environment.</li>
+                <li><strong>Kickoff Meeting:</strong> Align objectives, priorities, and timelines with key stakeholders.</li>
+            </ul>
+        </div>
+
+        <div class="prioritisation-card">
+            <h3>Workload Prioritisation</h3>
+            <ul>
+                <li><strong>Must-have:</strong> Critical functionalities essential for system operations and user satisfaction.</li>
+                <li><strong>Should-have:</strong> Features enhancing user experience but not immediately critical.</li>
+                <li><strong>Could-have:</strong> Minor changes or low-risk areas.</li>
+                <li><strong>Won’t-have:</strong> Non-essential items deferred for future consideration.</li>
+            </ul>
+        </div>
+
+        <div class="prioritisation-card">
+            <h3>Resource Allocation</h3>
+            <ul>
+                <li><strong>Developers:</strong> Focus on resolving defects.</li>
+                <li><strong>Testers:</strong> Execute prioritised test cases.</li>
+                <li><strong>Business Analysts:</strong> Validate changes against business requirements.</li>
+            </ul>
+        </div>
+    </section>
+<section>
+    <h2>Workload Prioritisation</h2>
+    <table style="width: 100%; border-collapse: collapse; margin: 20px auto; max-width: 800px; text-align: left;">
+        <thead>
+            <tr style="background-color: #4a90e2; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Priority Level</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Description</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Examples</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Must-have</strong></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Critical functionalities essential for system operations and user satisfaction.</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">
+                    <ul>
+                        <li>Login functionality</li>
+                        <li>Database connection stability</li>
+                        <li>Real-time transaction processing</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Should-have</strong></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Features enhancing user experience but not immediately critical.</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">
+                    <ul>
+                        <li>Improved search filters</li>
+                        <li>Customisable user interface themes</li>
+                        <li>Integration with third-party tools</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Could-have</strong></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Minor changes or low-risk areas.</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">
+                    <ul>
+                        <li>UI color scheme adjustments</li>
+                        <li>Adding tooltips to less-used features</li>
+                        <li>Background animation effects</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Won’t-have</strong></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Non-essential items deferred for future consideration.</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">
+                    <ul>
+                        <li>Social media sharing functionality</li>
+                        <li>Advanced analytics dashboard</li>
+                        <li>Integration with future APIs</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <footer>
+        <p>&copy; 2025 Daniel Rittie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

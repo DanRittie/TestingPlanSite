@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stakeholder Map</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 10px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        .grid-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f4f4f4;
+        }
+
+        .quadrant-label {
+            text-align: center;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Stakeholder Map</h1>
+    <p style="text-align: center;">A visual representation of stakeholder influence and interest.</p>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>High Influence, High Interest</h3>
+            <p>Leadership</p>
+            <p>Project Managers</p>
+        </div>
+        <div class="grid-item">
+            <h3>High Influence, Low Interest</h3>
+            <p>Senior Executives</p>
+            <p>Sponsors</p>
+        </div>
+        <div class="grid-item">
+            <h3>Low Influence, High Interest</h3>
+            <p>End Users</p>
+            <p>Customer Service Teams</p>
+        </div>
+        <div class="grid-item">
+            <h3>Low Influence, Low Interest</h3>
+            <p>Support Staff</p>
+            <p>Peripheral Teams</p>
+        </div>
+    </div>
+</body>
+</html>

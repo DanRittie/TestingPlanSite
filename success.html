@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measuring Success</title>
+    <link rel="stylesheet" href="css/scratch.css">
+    <style>
+        .image-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-section figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+<style>
+    .popup {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #4a90e2;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: none; /* Hidden by default */
+    }
+
+    .popup.show {
+        display: block;
+    }
+
+    .close-popup {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+</style>
+
+<div id="popup" class="popup">
+    Diagram below
+    <button class="close-popup" onclick="closePopup()">×</button>
+</div>
+
+<script>
+    // Show the popup after a delay
+    setTimeout(() => {
+        document.getElementById('popup').classList.add('show');
+    }, 1000); // 1 second delay
+
+    // Close popup function
+    function closePopup() {
+        document.getElementById('popup').classList.remove('show');
+    }
+</script>
+</head>
+<body>
+    <header>
+        <h1>Measuring Success</h1>
+        <img src="NSWLSC.jpg" alt="NSWLSC Logo">
+    </header>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="executive-summary.html" class="nav-link">Executive Summary</a>
+        <a href="objective-context.html" class="nav-link">Objective & Context</a>
+        <a href="testing-plan.html" class="nav-link">Testing Plan</a>
+        <a href="stakeholder-engagement.html" class="nav-link">Stakeholder Engagement</a>
+        <a href="prioritisation.html" class="nav-link">Prioritisation</a>
+        <a href="success.html" class="nav-link">Measuring Success</a>
+        <a href="alignment-with-capabilities.html" class="nav-link">Alignment with Capabilities</a>
+        <a href="conclusion.html" class="nav-link">Conclusion</a>
+    </nav>
+    <section>
+        <h2>Measuring Success</h2>
+        <p>
+            Success will be evaluated through two main categories: Key Success Metrics and Continuous Improvement.
+        </p>
+        <h3>Key Success Metrics</h3>
+        <ul>
+            <li><strong>Defect Rate Reduction:</strong> Fewer than two high-severity defects post-deployment.</li>
+            <li><strong>Timely Delivery:</strong> Adherence to set project timelines, especially for critical testing phases.</li>
+            <li><strong>Stakeholder and Customer Satisfaction:</strong> Positive feedback through post-deployment surveys and meetings.</li>
+            <li><strong>Standards Compliance:</strong> Full compliance with internal policies and industry standards.</li>
+        </ul>
+
+        <h3>Continuous Improvement</h3>
+        <ul>
+            <li>Analyse defect trends to uncover recurring issues.</li>
+            <li>Update testing frameworks and strategies based on lessons learned.</li>
+            <li>Document insights to guide future system changes and optimisations.</li>
+        </ul>
+    </section>
+    <section class="image-section">
+        <figure>
+            <img src="KPIDASHBOARD.png" alt="KPI Dashboard Example">
+            <figcaption>
+                Example KPI Dashboard: Defect Rate Reduction over four weeks.
+            </figcaption>
+        </figure>
+    </section>
+    <footer>
+        <p>&copy; 2025 Daniel Rittie. All rights reserved.</p>
+    </footer>
+</body>
+</html>

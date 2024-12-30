@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Plan</title>
+    <link rel="stylesheet" href="css/scratch.css">
+    <style>
+        .content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: background 0.3s;
+        }
+
+        .tab:hover {
+            background: #50e3c2;
+        }
+
+        .tab.active {
+            background: #50e3c2;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelector(`#${tab}`).classList.add('active');
+
+            document.querySelectorAll('.tab').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Testing Plan</h1>
+        <img src="NSWLSC.jpg" alt="NSWLSC Logo">
+    </header>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="executive-summary.html" class="nav-link">Executive Summary</a>
+        <a href="objective-context.html" class="nav-link">Objective & Context</a>
+        <a href="testing-plan.html" class="nav-link">Testing Plan</a>
+        <a href="stakeholder-engagement.html" class="nav-link">Stakeholder Engagement</a>
+        <a href="prioritisation.html" class="nav-link">Prioritisation</a>
+        <a href="success.html" class="nav-link">Measuring Success</a>
+        <a href="alignment-with-capabilities.html" class="nav-link">Alignment with Capabilities</a>
+        <a href="conclusion.html" class="nav-link">Conclusion</a>
+    </nav>
+
+    <div class="tabs">
+        <button class="tab active" data-tab="preparation" onclick="switchTab('preparation')">Preparation</button>
+        <button class="tab" data-tab="test-cases" onclick="switchTab('test-cases')">Test Cases</button>
+        <button class="tab" data-tab="execution" onclick="switchTab('execution')">Execution</button>
+        <button class="tab" data-tab="documentation" onclick="switchTab('documentation')">Documentation</button>
+        <button class="tab" data-tab="risk-mitigation" onclick="switchTab('risk-mitigation')">Risk Mitigation</button>
+    </div>
+
+   <section id="preparation" class="content active">
+    <h2>Preparation</h2>
+    <p>
+        A good preparation is fundamental to the success of any testing process. The following steps will be taken to gather any necessary information and resources:
+    </p>
+    <ul>
+        <li><strong>Documentation:</strong> Obtain detailed functional and technical specifications outlining the system change to fully understand the scope and requirements of the system change.</li>
+        <li><strong>Testing Environment Access:</strong> A stable and configured testing environment that would mirror the production system as well as the necessary credentials and permissions included.</li>
+        <li><strong>Prior Defect Logs and Performance Baselines:</strong> Check and review any historical data to identify common issues and establish performance benchmarks.</li>
+        <li><strong>Stakeholder Involvement:</strong> Collaborate and gain input/feedback from relevant teams to understand their expectations and pain points.</li>
+        <li><strong>Business Impact Analysis:</strong> Assess any potential implications that the system change may produce to prioritise critical components for testing.</li>
+    </ul>
+    <p>
+        <strong>Tools:</strong>
+    </p>
+    <ul>
+        <li>Salesforce Test Automation Framework</li>
+        <li>SAP Test Automation Tools</li>
+        <li>Jira for defect tracking</li>
+        <li>TestRail for efficient monitoring and reporting</li>
+    </ul>
+
+    <!-- Add SDLC Section Inline -->
+    <h2>Software Development Life Cycle (SDLC)</h2>
+    <img src="SDLC.png" alt="Software Development Life Cycle" style="display: block; margin: 20px auto; max-width: 80%; height: auto; border: 2px solid #4a90e2; border-radius: 10px;">
+    <p style="text-align: center; font-style: italic; color: #4a90e2; margin-top: 10px;">
+        The Software Development Life Cycle (SDLC) highlights how testing integrates with design, development, and deployment, ensuring a robust and error-free system.
+    </p>
+</section>
+
+
+
+<section id="test-cases" class="content">
+    <h2>Test Cases</h2>
+    <p>
+        The next step involves making detailed and comprehensive test cases that are tailored to the system change. Key considerations include:
+    </p>
+    <ul>
+        <li><strong>Functional Testing:</strong> To verify the individual components of the system function as expected.</li>
+        <li><strong>Regression Testing:</strong> Ensure the change does not disrupt the already existing functionalities.</li>
+        <li><strong>Integration Testing:</strong> Test the interaction between different modules to confirm a seamless data flow.</li>
+        <li><strong>User Acceptance Testing (UAT):</strong> Required to validate that the system meets end user expectations and requirements.</li>
+    </ul>
+    <p>
+        It is a priority to focus on high-risk areas such as modules with high user interaction or any critical to business operations. Test cases will be prioritised based on their potential impact on user experience and organisational outcomes.
+    </p>
+</section>
+
+
+    <section id="execution" class="content">
+        <h2>Execution</h2>
+        <p>
+            A phased approach will be taken to execute the tests and will ensure validation at every level:
+        </p>
+        <ul>
+            <li><strong>Unit Testing:</strong> Evaluate individual components or modules for isolated functionality.</li>
+            <li><strong>Integration Testing:</strong> Test any interconnected components to verify smooth communication.</li>
+            <li><strong>User Acceptance Testing (UAT):</strong> Collaborate with stakeholders to check the change aligns with the user needs.</li>
+            <li><strong>Performance Testing:</strong> Assess the system scalability and responsiveness under load and traffic.</li>
+        </ul>
+        <p>
+            Jira, as mentioned before, can identify any defects in a centralised system and can be categorised by priority and severity. Regular triage meetings must also be held to address critical defects swiftly.
+        </p>
+    </section>
+
+    <section id="documentation" class="content">
+        <h2>Documentation</h2>
+        <p>
+            Documentation is required to make sure progress is tracked and to support any future development efforts. The test logs will include a format as follows:
+        </p>
+        <ul>
+            <li><strong>Test Case ID:</strong> A unique identifier for each test case.</li>
+            <li><strong>Expected Outcome:</strong> The desired result for the test.</li>
+            <li><strong>Outcome:</strong> The observed outcome during execution of test.</li>
+            <li><strong>Defect Severity:</strong> A classification of the defects impact (i.e. critical, high, medium, or low).</li>
+            <li><strong>Resolution Status:</strong> Notes on when and how the defect was addressed.</li>
+        </ul>
+        <p>
+            By following this documentation format, it can be kept in a shared repository for easy access and reference for later use.
+        </p>
+    </section>
+
+    <section id="risk-mitigation" class="content">
+        <h2>Risk Mitigation</h2>
+        <p>
+            To address all potential challenges, the following proactive risk management strategies will be implemented:
+        </p>
+        <ul>
+            <li><strong>Contingency Plans:</strong> In cases where documentation is not yet available, work with stakeholders and developers to clarify requirements and assumptions.</li>
+            <li><strong>Exploratory Testing:</strong> Undertake exploratory testing to identify issues that may not be documented.</li>
+            <li><strong>Escalation Process:</strong> Establish a set and clear escalation hierarchy to ensure that urgent defects are tended to immediately, to minimise delays in the testing timeline.</li>
+        </ul>
+        <p>
+            By following a structured testing plan such as the one above, I aim to deliver a robust and reliable system update that will meet expectations while also minimising any disruptions or risks. This approach ensures thorough testing of the urgent system change, therefore aligning with the Department of Customer Services' commitment to excellence.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Daniel Rittie. All rights reserved.</p>
+    </footer>
+</body>
+</html>
